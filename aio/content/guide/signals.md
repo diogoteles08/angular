@@ -65,7 +65,7 @@ const doubleCount: Signal<number> = computed(() => count() * 2);
 
 The `doubleCount` signal depends on `count`. Whenever `count` updates, Angular knows that anything which depends on either `count` or `doubleCount` needs to update as well.
 
-#### Computeds are both lazily evaluated and memoized
+#### Computed signals are both lazily evaluated and memoized
 
 `doubleCount`'s derivation function does not run to calculate its value until the first time `doubleCount` is read. Once calculated, this value is cached, and future reads of `doubleCount` will return the cached value without recalculating.
 
@@ -123,7 +123,7 @@ Effects always run **at least once.** When an effect runs, it tracks any signal 
 
 Effects always execute **asynchronously**, during the change detection process.
 
-### Uses for effects
+### Use cases for effects
 
 Effects are rarely needed in most application code, but may be useful in specific circumstances. Here are some examples of situations where an `effect` might be a good solution:
 
@@ -223,7 +223,7 @@ effect(() => {
 });
 ```
 
-This example logs a message when _either_ `currentUser` or `counter` changes. However, if the effect should only run only when `currentUser` changes, then the read of `counter` is only incidental and changes to `counter` shouldn't log a new message.
+This example logs a message when _either_ `currentUser` or `counter` changes. However, if the effect should only run when `currentUser` changes, then the read of `counter` is only incidental and changes to `counter` shouldn't log a new message.
 
 You can prevent a signal read from being tracked by calling its getter with `untracked`:
 
@@ -263,3 +263,5 @@ effect((onCleanup) => {
   });
 });
 ```
+
+@reviewed 2023-06-21

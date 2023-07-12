@@ -12,6 +12,7 @@ import {Op, OpList, XrefId} from '../operations';
 import {ConsumesSlotOpTrait, TRAIT_CONSUMES_SLOT, TRAIT_USES_SLOT_INDEX, UsesSlotIndexTrait} from '../traits';
 
 import {ListEndOp, NEW_OP, StatementOp, VariableOp} from './shared';
+
 import type {UpdateOp} from './update';
 
 /**
@@ -19,7 +20,27 @@ import type {UpdateOp} from './update';
  */
 export type CreateOp =
     ListEndOp<CreateOp>|StatementOp<CreateOp>|ElementOp|ElementStartOp|ElementEndOp|ContainerOp|
-    ContainerStartOp|ContainerEndOp|TemplateOp|TextOp|ListenerOp|VariableOp<CreateOp>;
+    ContainerStartOp|ContainerEndOp|TemplateOp|TextOp|ListenerOp|PipeOp|VariableOp<CreateOp>;
+
+/**
+ * An operation representing the creation of an element or container.
+ */
+export type ElementOrContainerOps =
+    ElementOp|ElementStartOp|ContainerOp|ContainerStartOp|TemplateOp;
+
+/**
+ * The set of OpKinds that represent the creation of an element or container
+ */
+const elementContainerOpKinds = new Set([
+  OpKind.Element, OpKind.ElementStart, OpKind.Container, OpKind.ContainerStart, OpKind.Template
+]);
+
+/**
+ * Checks whether the given operation represents the creation of an element or container.
+ */
+export function isElementOrContainerOp(op: CreateOp): op is ElementOrContainerOps {
+  return elementContainerOpKinds.has(op.kind);
+}
 
 /**
  * Representation of a local reference on an element.
@@ -41,7 +62,7 @@ export interface LocalRef {
  * used to represent their element-like nature.
  */
 export interface ElementOrContainerOpBase extends Op<CreateOp>, ConsumesSlotOpTrait {
-  kind: OpKind.Element|OpKind.ElementStart|OpKind.Container|OpKind.ContainerStart|OpKind.Template;
+  kind: ElementOrContainerOps['kind'];
 
   /**
    * `XrefId` allocated for this element.
@@ -269,6 +290,22 @@ export function createListenerOp(target: XrefId, name: string, tag: string): Lis
     handlerFnName: null,
     ...NEW_OP,
     ...TRAIT_USES_SLOT_INDEX,
+  };
+}
+
+export interface PipeOp extends Op<CreateOp>, ConsumesSlotOpTrait {
+  kind: OpKind.Pipe;
+  xref: XrefId;
+  name: string;
+}
+
+export function createPipeOp(xref: XrefId, name: string): PipeOp {
+  return {
+    kind: OpKind.Pipe,
+    xref,
+    name,
+    ...NEW_OP,
+    ...TRAIT_CONSUMES_SLOT,
   };
 }
 

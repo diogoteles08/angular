@@ -18,7 +18,7 @@ If you haven't reviewed the introduction, visit the [Introduction to Angular tut
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
 ## After you finish
-* Your app has a new component: `HousingLocationComponent` and it displays a message confirming that the component was added to your application.
+Your app has a new component, `HousingLocationComponent`, and it displays a message confirming that the component was added to your application.
 
 ## Lesson steps
 
@@ -30,10 +30,12 @@ In this step, you create a new component for your app.
 
 In the **Terminal** pane of your IDE:
 
+1. In your project directory, navigate to the `first-app` directory.
+
 1. Run this command to create a new `HousingLocationComponent`
 
     <code-example format="shell" language="shell">
-    ng generate component HousingLocation --standalone --inline-template --skip-tests
+    ng generate component housingLocation --standalone --inline-template --skip-tests
     </code-example>
 
 1. Run this command to build and serve your app.
@@ -46,8 +48,9 @@ In the **Terminal** pane of your IDE:
 
 1.  Open a browser and navigate to `http://localhost:4200` to find the application.
 1.  Confirm that the app builds without error.
-
-    *Note: It should render the same as it did in the previous lesson because even though you added a new component, you haven't included it in any of the app's templates, yet.*
+    <div class="callout is-helpful">
+      It should render the same as it did in the previous lesson because even though you added a new component, you haven't included it in any of the app's templates, yet.
+    </div>
 1.  Leave `ng serve` running as you complete the next steps.
 
 ### Step 2 - Add the new component to your app's layout
@@ -93,3 +96,5 @@ If you are having any trouble with this lesson, you can review the completed cod
 ## Next steps
 
 * [First Angular app lesson 4 -  Add a housing location interface to the application](tutorial/first-app/first-app-lesson-04)
+
+@reviewed 2023-07-11

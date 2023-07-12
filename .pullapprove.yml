@@ -242,6 +242,7 @@ groups:
           'aio/content/images/guide/dependency-injection-in-action/**/{*,.*}',
           'aio/content/guide/dependency-injection-navtree.md',
           'aio/content/guide/dependency-injection-providers.md',
+          'aio/content/guide/dependency-injection-context.md',
           'aio/content/guide/lightweight-injection-tokens.md',
           'aio/content/guide/displaying-data.md',
           'aio/content/examples/displaying-data/**/{*,.*}',
@@ -378,7 +379,6 @@ groups:
         contains_any_globs(files, [
           'packages/common/http/**/{*,.*}',
           'packages/examples/http/**/{*,.*}',
-          'aio/content/guide/http.md',
           'aio/content/guide/understanding-communicating-with-http.md',
           'aio/content/guide/http-configure-http-url-parameters.md',
           'aio/content/guide/http-handle-request-errors.md',
@@ -781,8 +781,9 @@ groups:
           ])
     reviewers:
       users:
-        - alxhub
+        - devversion
         - josephperrott
+        - pkozlowski-opensource
 
   # =========================================================
   #  Integration Tests

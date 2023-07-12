@@ -1,14 +1,157 @@
-<a name="16.1.0-next.2"></a>
-# 16.1.0-next.2 (2023-05-24)
+<a name="16.1.4"></a>
+# 16.1.4 (2023-07-06)
 ### core
 | Commit | Type | Description |
 | -- | -- | -- |
-| [75fdbcb8f2](https://github.com/angular/angular/commit/75fdbcb8f285ef17b5a73fb820b983137e40cab7) | fix | fix `Self` flag inside embedded views with custom injectors ([#50270](https://github.com/angular/angular/pull/50270)) |
-| [8b44ba3170](https://github.com/angular/angular/commit/8b44ba31701a1c1cf1ec92d2a26f9cf657f5408b) | fix | host directives incorrectly validating aliased bindings ([#50364](https://github.com/angular/angular/pull/50364)) |
+| [4ba5850ba6](https://github.com/angular/angular/commit/4ba5850ba6b1748cf02b94649ab1ec359b4540ad) | fix | use `setTimeout` when coalescing tasks in Node.js ([#50820](https://github.com/angular/angular/pull/50820)) |
+### upgrade
+| Commit | Type | Description |
+| -- | -- | -- |
+| [a4348355ce](https://github.com/angular/angular/commit/a4348355ce630273f762099fe6887a90ef799119) | fix | allow for downgraded components to work with component-router ([#50871](https://github.com/angular/angular/pull/50871)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.2.0-next.1"></a>
+# 16.2.0-next.1 (2023-06-28)
+### benchpress
+| Commit | Type | Description |
+| -- | -- | -- |
+| [dd850b2ab7](https://github.com/angular/angular/commit/dd850b2ab781f24065550f8a948ced498e0f1e99) | fix | correctly report GC memory amounts ([#50760](https://github.com/angular/angular/pull/50760)) |
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [29340a0678](https://github.com/angular/angular/commit/29340a06789652e359e61b32f1814dcd20d9bd26) | fix | expose input transform function on ComponentFactory and ComponentMirror ([#50713](https://github.com/angular/angular/pull/50713)) |
+### elements
+| Commit | Type | Description |
+| -- | -- | -- |
+| [d64864e95e](https://github.com/angular/angular/commit/d64864e95e193e46180aeaf0d634152327650871) | fix | support input transform functions ([#50713](https://github.com/angular/angular/pull/50713)) |
+### platform-browser
+| Commit | Type | Description |
+| -- | -- | -- |
+| [2b55103e94](https://github.com/angular/angular/commit/2b55103e94578ab1cb765147077e82e1228b0dbb) | fix | wait until animation completion before destroying renderer ([#50677](https://github.com/angular/angular/pull/50677)) |
+| [0380564f85](https://github.com/angular/angular/commit/0380564f8562f5971cff671319439ad0f2b40a7e) | fix | wait until animation completion before destroying renderer ([#50860](https://github.com/angular/angular/pull/50860)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.3"></a>
+# 16.1.3 (2023-06-28)
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [dd6fc5785f](https://github.com/angular/angular/commit/dd6fc5785fcf10b88db8b87d726af604668bc143) | fix | expose input transform function on ComponentFactory and ComponentMirror ([#50713](https://github.com/angular/angular/pull/50713)) |
+### elements
+| Commit | Type | Description |
+| -- | -- | -- |
+| [e1bbe47c23](https://github.com/angular/angular/commit/e1bbe47c234a495766cc07a9741a194954a6b9b4) | fix | support input transform functions ([#50713](https://github.com/angular/angular/pull/50713)) |
+### platform-browser
+| Commit | Type | Description |
+| -- | -- | -- |
+| [79dd6a847a](https://github.com/angular/angular/commit/79dd6a847a742ccf69597b122026758ad2b0b629) | fix | wait until animation completion before destroying renderer ([#50677](https://github.com/angular/angular/pull/50677)) |
+| [a797f41d1b](https://github.com/angular/angular/commit/a797f41d1bcf11945673ef6d0474f33ad4614602) | fix | wait until animation completion before destroying renderer ([#50860](https://github.com/angular/angular/pull/50860)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.2.0-next.0"></a>
+# 16.2.0-next.0 (2023-06-21)
+### compiler-cli
+| Commit | Type | Description |
+| -- | -- | -- |
+| [12bad6576d](https://github.com/angular/angular/commit/12bad6576d2ffe4667118b214d9c7598ed3d8edb) | fix | libraries compiled with v16.1+ breaking with Angular framework v16.0.x ([#50714](https://github.com/angular/angular/pull/50714)) |
+### router
+| Commit | Type | Description |
+| -- | -- | -- |
+| [0b14e4ef74](https://github.com/angular/angular/commit/0b14e4ef742b1c0f73d873e2c337683b60f46845) | feat | exposes the `fixture` of the `RouterTestingHarness` ([#50280](https://github.com/angular/angular/pull/50280)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.2"></a>
+# 16.1.2 (2023-06-21)
 ### http
 | Commit | Type | Description |
 | -- | -- | -- |
-| [2cdb4c5911](https://github.com/angular/angular/commit/2cdb4c5911965aa273f11432e04502e52b5e1b9b) | fix | create macrotask during request handling instead of load start ([#50406](https://github.com/angular/angular/pull/50406)) |
+| [9488a3fd46](https://github.com/angular/angular/commit/9488a3fd4640b902243f441cf54776160da1a0fe) | fix | Send query params on fetch request ([#50740](https://github.com/angular/angular/pull/50740)) |
+| [5ae001829c](https://github.com/angular/angular/commit/5ae001829c3f3594e3c10f30e0b89ea1eb2b84fb) | fix | use serializeBody to support JSON payload in FetchBackend ([#50776](https://github.com/angular/angular/pull/50776)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.1"></a>
+# 16.1.1 (2023-06-14)
+### compiler-cli
+| Commit | Type | Description |
+| -- | -- | -- |
+| [71360b3a3e](https://github.com/angular/angular/commit/71360b3a3e7cb3419176c89f8c78ebd2e14ff880) | fix | libraries compiled with v16.1+ breaking with Angular framework v16.0.x ([#50715](https://github.com/angular/angular/pull/50715)) |
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [d9bed48eb5](https://github.com/angular/angular/commit/d9bed48eb590bc4a45769835bccc206d418f620c) | fix | extend toSignal to accept any Subscribable ([#50162](https://github.com/angular/angular/pull/50162)) |
+### migrations
+| Commit | Type | Description |
+| -- | -- | -- |
+| [5e1d8444ae](https://github.com/angular/angular/commit/5e1d8444ae2952b4e9e5d7089200e7a3ac700e0d) | fix | Prevent a component from importing itself. ([#50554](https://github.com/angular/angular/pull/50554)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.1.0"></a>
+# 16.1.0 (2023-06-13)
+### compiler
+| Commit | Type | Description |
+| -- | -- | -- |
+| [4e663297c5](https://github.com/angular/angular/commit/4e663297c564078c8185c6a73e2baa844406a315) | fix | error when reading compiled input transforms metadata in JIT mode ([#50600](https://github.com/angular/angular/pull/50600)) |
+| [721bc72649](https://github.com/angular/angular/commit/721bc72649b7d73f730298e04a4606a8bfd53011) | fix | resolve deprecation warning with TypeScript 5.1 ([#50460](https://github.com/angular/angular/pull/50460)) |
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [68017d4e75](https://github.com/angular/angular/commit/68017d4e75abed78b378dce54f860cfa0d0fa42f) | feat | add ability to transform input values ([#50420](https://github.com/angular/angular/pull/50420)) |
+| [69dadd2502](https://github.com/angular/angular/commit/69dadd25020ee84364466c0740f695984dd8c84d) | feat | support TypeScript 5.1 ([#50156](https://github.com/angular/angular/pull/50156)) |
+| [c0ebe34cbd](https://github.com/angular/angular/commit/c0ebe34cbd235dc0b5e56fbe37429b77c0d91170) | fix | add additional component metadata to component ID generation ([#50336](https://github.com/angular/angular/pull/50336)) |
+### http
+| Commit | Type | Description |
+| -- | -- | -- |
+| [85c5427582](https://github.com/angular/angular/commit/85c54275825a57fd3c7055a99e58bb211e085af9) | feat | Introduction of the `fetch` Backend for the `HttpClient` ([#50247](https://github.com/angular/angular/pull/50247)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.0.6"></a>
+# 16.0.6 (2023-06-13)
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [05ac0868c9](https://github.com/angular/angular/commit/05ac0868c9149fafcb0a0b815b31a65119090838) | fix | avoid duplicated content during hydration while processing a component with i18n ([#50644](https://github.com/angular/angular/pull/50644)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.0.5"></a>
+# 16.0.5 (2023-06-08)
+### compiler
+| Commit | Type | Description |
+| -- | -- | -- |
+| [703b8fcac1](https://github.com/angular/angular/commit/703b8fcac1c9051bf2f342e5502b3cf28dbcab2c) | fix | do not remove comments in component styles ([#50346](https://github.com/angular/angular/pull/50346)) |
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [2b6da93e19](https://github.com/angular/angular/commit/2b6da93e191a4250dfc81a7bd54c86e45909ea2d) | fix | incorrectly throwing error for self-referencing component ([#50559](https://github.com/angular/angular/pull/50559)) |
+| [c992109d6c](https://github.com/angular/angular/commit/c992109d6c385a2b471f08eaa56701dfd513f219) | fix | wait for HTTP in `ngOnInit` correctly before server render ([#50573](https://github.com/angular/angular/pull/50573)) |
+### platform-server
+| Commit | Type | Description |
+| -- | -- | -- |
+| [c0d4086c6e](https://github.com/angular/angular/commit/c0d4086c6eb7685571366b65cd68a51de186f1a3) | fix | surface errors during rendering ([#50587](https://github.com/angular/angular/pull/50587)) |
+
+<!-- CHANGELOG SPLIT MARKER -->
+
+<a name="16.0.4"></a>
+# 16.0.4 (2023-06-01)
+### animations
+| Commit | Type | Description |
+| -- | -- | -- |
+| [df65c4fc8f](https://github.com/angular/angular/commit/df65c4fc8f71ab9bf59ec4e5e820d136b12fb570) | fix | Trigger leave animation when ViewContainerRef is injected ([#48705](https://github.com/angular/angular/pull/48705)) |
+### common
+| Commit | Type | Description |
+| -- | -- | -- |
+| [7e1bc513de](https://github.com/angular/angular/commit/7e1bc513dead7d809f5ba2e6edc45b85af12f828) | fix | untrack subscription and unsubscription in async pipe ([#50522](https://github.com/angular/angular/pull/50522)) |
+### core
+| Commit | Type | Description |
+| -- | -- | -- |
+| [9970b29ace](https://github.com/angular/angular/commit/9970b29acef11f1dfedd2640520b4bca4b996f81) | fix | update `ApplicationRef.isStable` to account for rendering pending tasks ([#50425](https://github.com/angular/angular/pull/50425)) |
 
 <!-- CHANGELOG SPLIT MARKER -->
 
@@ -27,17 +170,6 @@
 
 <!-- CHANGELOG SPLIT MARKER -->
 
-<a name="16.1.0-next.1"></a>
-# 16.1.0-next.1 (2023-05-17)
-### core
-| Commit | Type | Description |
-| -- | -- | -- |
-| [c0ebe34cbd](https://github.com/angular/angular/commit/c0ebe34cbd235dc0b5e56fbe37429b77c0d91170) | fix | add additional component metadata to component ID generation ([#50336](https://github.com/angular/angular/pull/50336)) |
-| [03f1e240b3](https://github.com/angular/angular/commit/03f1e240b368c4c87fd8412605bf0eff9adc153d) | fix | allow onDestroy unregistration while destroying ([#50237](https://github.com/angular/angular/pull/50237)) |
-| [165b8b647c](https://github.com/angular/angular/commit/165b8b647c39503b9fefd00188948cdc522c2c10) | fix | allow passing value of any type to `isSignal` function ([#50035](https://github.com/angular/angular/pull/50035)) |
-
-<!-- CHANGELOG SPLIT MARKER -->
-
 <a name="16.0.2"></a>
 # 16.0.2 (2023-05-17)
 ### core
@@ -46,15 +178,6 @@
 | [c1016d4e57](https://github.com/angular/angular/commit/c1016d4e578152dcdfe7c4a4673f27e12bfabf8d) | fix | add additional component metadata to component ID generation ([#50340](https://github.com/angular/angular/pull/50340)) |
 | [cc41758b59](https://github.com/angular/angular/commit/cc41758b595da46a3fd14a58b3832c77b251b940) | fix | allow onDestroy unregistration while destroying ([#50237](https://github.com/angular/angular/pull/50237)) |
 | [7d679bdb59](https://github.com/angular/angular/commit/7d679bdb59815e7e816337532d069d68cf45a6d8) | fix | allow passing value of any type to `isSignal` function ([#50035](https://github.com/angular/angular/pull/50035)) |
-
-<!-- CHANGELOG SPLIT MARKER -->
-
-<a name="16.1.0-next.0"></a>
-# 16.1.0-next.0 (2023-05-10)
-### core
-| Commit | Type | Description |
-| -- | -- | -- |
-| [69dadd2502](https://github.com/angular/angular/commit/69dadd25020ee84364466c0740f695984dd8c84d) | feat | support TypeScript 5.1 ([#50156](https://github.com/angular/angular/pull/50156)) |
 
 <!-- CHANGELOG SPLIT MARKER -->
 
@@ -74,7 +197,7 @@
 <a name="16.0.0"></a>
 # 16.0.0 (2023-05-03)
 
-[Blog post "Angular v16 is now available"](http://goo.gle/angular-v16).
+[Blog post "Angular v16 is now available"](https://goo.gle/angular-v16).
 
 ## Breaking Changes
 ### 
@@ -924,7 +1047,7 @@ Andrew Kushnir
 <a name="15.0.0"></a>
 # 15.0.0 (2022-11-16)
 
-[Blog post "Angular v15 is now available"](http://goo.gle/angular-v15).
+[Blog post "Angular v15 is now available"](https://goo.gle/angular-v15).
 
 ## Breaking Changes
 ### compiler
@@ -1587,7 +1710,7 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 <a name="14.0.0"></a>
 # 14.0.0 (2022-06-02)
 
-[Blog post "Angular v14 is now available"](http://goo.gle/angular-v14).
+[Blog post "Angular v14 is now available"](https://goo.gle/angular-v14).
 
 ## Breaking Changes
 ### animations
